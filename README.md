@@ -1,6 +1,6 @@
 # GoLang
 Learning Go Language
 
-``` css
+``` >css
 use go run start.go
 ```
