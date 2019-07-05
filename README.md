@@ -1,6 +1,7 @@
 # GoLang
 Learning Go Language
 
-``` javascript
+``` css
+  font-color:blue;
 use go run start.go
 ```
