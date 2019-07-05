@@ -2,5 +2,5 @@
 Learning Go Language
 
 ``` css
->use go run start.go
+> use go run start.go
 ```
