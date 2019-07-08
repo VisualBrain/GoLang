@@ -21,4 +21,15 @@ func main() {
             }
         }
         fmt.Println(c)
+        
+        d:= [...]string {"a","b","c","d","e","f"}
+        fmt.Println(d)
+        for i:= range d{
+            fmt.Println(d[i])
+        }
+        
+        capitals := map[string]string {"Germany":"Berlin","Britain":"Washington","United States of America":"New York","Bangladesh":"Dhaka","Japan":"Tokyo","India":"New Delhi","Nepal":"Kathmandu","China":"Beijing","South Korea":"Seoul"}
+        for key,vals := range capitals {
+            fmt.Println("The Capital of ",key,"is",vals)
+        }
 }
