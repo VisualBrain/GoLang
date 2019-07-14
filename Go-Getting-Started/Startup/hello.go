@@ -15,6 +15,8 @@ import (
 	_ "reflect"
 	"runtime"
 	_ "runtime"
+	"strings"
+	_ "strings"
 )
 
 const (
@@ -53,7 +55,7 @@ func main() {
 	var4 := 56 //shorthand declare only work inside function
 	println(msg1, "\t", var1, "\t", var2, "\t", var4)
 	fmt.Println("The type of Var1 is :", reflect.TypeOf(var1))
-	println("Running Program Operating System:", runtime.GOOS)
+	println("Running Program Operating System:", strings.ToUpper(runtime.GOOS))
 	fmt.Println("Profile Cpu :", runtime.CPUProfile)
 	fmt.Println("Memory Profile", runtime.MemProfile)
 	fmt.Println("Number of Cpu:", runtime.NumCPU)
