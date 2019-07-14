@@ -67,11 +67,12 @@ func main() {
 	fmt.Println(sliceWithoutUnderlyingArray)
 
 	//to solve the incompetency of sliceWithoutUnderlyingArray to maintain large data Array  we use make function
-	// make(type, initialsize,capacity)
+	// make(type, len,capacity)
 	slicewithMake := make([]float64, 100)
 	slicewithMake[0] = 45
 	slicewithMake[1] = 54
 	slicewithMake[2] = 99
+	//we get the capacity using cap(sliceName) and length of slice using len(sliceName)
 
 	fmt.Println(slicewithMake)
 	//	slicewithMake1 := make([]float64, 100, 50) //len larger than capacity of slice
