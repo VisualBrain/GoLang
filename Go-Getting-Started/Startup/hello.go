@@ -33,6 +33,11 @@ default values-
 
 */
 func main() {
+	//Entry Point
+	//Only For Executables
+	//Take No Argument
+	//return nothing
+	//change main to another will cause program not to run
 	fmt.Println("Hello World")
 	//	msg = "Hello" //show Error cannot assign to msg
 	println(msg) //second Way without using fmts
