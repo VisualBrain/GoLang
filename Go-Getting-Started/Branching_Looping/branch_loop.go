@@ -2,8 +2,22 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
 )
 
+/*
+Error :
+  idiometic to return an error as last returned value if any error occur
+	func test(target typename)(result typename,err error)
+	if err == nil {  // nil is used to indicate success
+	  //no error
+	}else{
+	fmt.Println("Error occured:",err)
+	}
+}
+
+*/
 func main() {
 
 	fmt.Println("Branch And Looping")
@@ -36,13 +50,24 @@ func main() {
 	default:
 		println("Default")
 	}
+	switch random := randNum(); random {
+	case 0, 2, 4, 6, 8:
+		println("Odd Number")
+	case 1, 3, 5, 7, 9:
+		println("Even Number")
+	default:
+		println("Default")
 
+	}
 	foo := 1
 	switch {
 	case foo == 1:
 		println("one")
+		fallthrough
 	case foo == 2:
 		println("two")
+	case foo >= 1:
+		println("Greater than equal to 1")
 	case foo > 2:
 		println("Greater than 2")
 	default:
@@ -86,4 +111,16 @@ func main() {
 	for key, val := range Map {
 		fmt.Printf("%-14s %-6s%-21s%s\n", "The Key is :", key, "And Value is :", val)
 	}
+}
+
+/*
+fallthrough()
+still execute all other cases after found the correct one
+
+
+*/
+
+func randNum() int {
+	rand.Seed(time.Now().Unix())
+	return rand.Intn(10)
 }
