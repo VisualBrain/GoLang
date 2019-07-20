@@ -1,0 +1,16 @@
+ invoice
+  invoice-no,amount,purchase order number,transaction-date[unix]
+  
+ //How to run
+ run the application on console
+  copy and paste invoice from invoices[folder] to source folder
+  then see on the console
+  
+
+  
+ Channels - are used to send messages securely ,
+           Channels are independent Objects,channel can be distributed to actors in applications without
+           them knowing each other makes highly decoupled architecture which makes individual actors very
+           easy to test/debug
+          - used to isolate actor and application from one another
+          - Only one actor use channel at a time

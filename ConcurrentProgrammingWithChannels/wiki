@@ -1,0 +1,22 @@
+ Channels - are used to send messages securely ,
+           Channels are independent Objects,channel can be distributed to actors in applications without
+           them knowing each other makes highly decoupled architecture which makes individual actors very
+           easy to test/debug
+          - used to isolate actor and application from one another
+          - Only one actor use channel at a time
+          - channel has no built in storage capacity
+          - no-wait for sender/receiver 
+          - once sender send the message ,there will be someone on the other side of channel to receive it 
+            because channel has no memory,if no receiver ,then message will stuck at sender and block it from proceed
+          - channel works asynchronously
+          
+To make channel
+    chan is a keyword for channel
+use 
+   channel := make(chan typeOfDataYouWantToPass)  typeOfDataYouWantToPass/message --> string/int/bytes/object etc
+   after that
+      to get the message from the channel
+       use <- receive operator e.g fmt.Println(<-channel)
+       
+Deadlock - each thread is waiting for someone and nothing happens results in deadlock
+Buffered Channel - allow us to store the message until receiver is available
