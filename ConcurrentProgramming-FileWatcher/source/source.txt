@@ -1,0 +1,1 @@
+In source folder ,copy and paste invoices while running the application to see the output on console
